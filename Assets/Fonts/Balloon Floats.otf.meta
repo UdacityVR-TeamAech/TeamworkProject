@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: f82c16dfb53292e42bea46d41429c5ee
+timeCreated: 1507468962
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Balloon Floats
+  fontNames:
+  - Balloon Floats
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,27 @@
+PolyLabs LLC
+------------
+Marble and Granite Substances
+------------
+
+All Substances in this package are in .SBSAR format. Because each asset in this 
+package is intended to give a glossy look, all files share the same editable presets.
+
+Each Substance can be randomized by pressing the "Randomize" button found under 
+procedural properties and allowing time forcthe Substance to generate.
+
+The following are the editable presets for all the Substances. For granite, they will
+appear under the "Granite" drop down button and for marble, they will appear under the 
+"Marble" drop down button.
+
+-Glossiness:
+	Intensifies the glossiness map to give a more reflective appearence.
+-Gloss Imperfection:
+	Intensifies the glossiness from curves to make the light reflect more on
+	certain portions of the surface than others. This preset requires Glossiness
+	to be greater than 0.
+-Bumpiness:
+	Intensifies the normal map value slightly to give the appearence of depth or 
+	wear to the surface. This has been set to 0 by default.
+
+
+For questions or concerns, email us at polylaboratory@gmail.com and we will be happy to help!
