@@ -35,8 +35,13 @@ public class MicrophoneInput : MonoBehaviour {
 
 		Debug.Log ("mic: " + microphone + "" + "minThess " + minThreshold);
 
+
 		//initialize input with default mic
 		//StartMicrophone();
+	}
+
+	public bool micInitialized(){
+		return audioSource != null && microphone != null;
 	}
 
 	public void PauseMicrophone(){
