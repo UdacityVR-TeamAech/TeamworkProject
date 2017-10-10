@@ -77,15 +77,17 @@ LightmapSettings:
     m_PVRDirectSampleCount: 10
     m_PVRSampleCount: 10
     m_PVRBounces: 2
-    m_PVRFiltering: 0
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousColorSigma: 1
-    m_PVRFilteringAtrousNormalSigma: 1
-    m_PVRFilteringAtrousPositionSigma: 1
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
   m_LightingDataAsset: {fileID: 112000002, guid: 606de7948f7b3c44082a5f6e6621287e,
     type: 2}
   m_UseShadowmask: 0
@@ -1151,7 +1153,7 @@ MonoBehaviour:
   blueBalloon: {fileID: 1692862545}
   greenBalloon: {fileID: 177737063}
   coloringObject1: {fileID: 833121530}
-  coloringObject2: {fileID: 0}
+  coloringObject2: {fileID: 833121530}
   redBalloonSphere: {fileID: 448693728}
   blueBalloonSphere: {fileID: 1709799940}
   greenBalloonSphere: {fileID: 1245417204}
@@ -2190,7 +2192,7 @@ MonoBehaviour:
   blueBalloon: {fileID: 824552401}
   greenBalloon: {fileID: 899402585}
   coloringObject1: {fileID: 658605932}
-  coloringObject2: {fileID: 0}
+  coloringObject2: {fileID: 658605932}
   redBalloonSphere: {fileID: 1864201463}
   blueBalloonSphere: {fileID: 1292118317}
   greenBalloonSphere: {fileID: 1383710968}
@@ -7111,7 +7113,7 @@ MonoBehaviour:
   blueBalloon: {fileID: 4193031}
   greenBalloon: {fileID: 62412127}
   coloringObject1: {fileID: 2131992616}
-  coloringObject2: {fileID: 0}
+  coloringObject2: {fileID: 2131992616}
   redBalloonSphere: {fileID: 596902405}
   blueBalloonSphere: {fileID: 1463607242}
   greenBalloonSphere: {fileID: 1984845376}
@@ -7196,7 +7198,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4496130662357318, guid: 442c643480a6b3044a8c8f33d7202b5d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5.52
+      value: 5.913
       objectReference: {fileID: 0}
     - target: {fileID: 4496130662357318, guid: 442c643480a6b3044a8c8f33d7202b5d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -7285,7 +7287,7 @@ MonoBehaviour:
   blueBalloon: {fileID: 580089323}
   greenBalloon: {fileID: 816234984}
   coloringObject1: {fileID: 1733201213}
-  coloringObject2: {fileID: 0}
+  coloringObject2: {fileID: 1733201213}
   redBalloonSphere: {fileID: 201812230}
   blueBalloonSphere: {fileID: 1352834727}
   greenBalloonSphere: {fileID: 1523934444}
@@ -10283,8 +10285,8 @@ MonoBehaviour:
   redBalloon: {fileID: 753277336}
   blueBalloon: {fileID: 1852310633}
   greenBalloon: {fileID: 440231280}
-  coloringObject1: {fileID: 0}
-  coloringObject2: {fileID: 0}
+  coloringObject1: {fileID: 896514395}
+  coloringObject2: {fileID: 896514395}
   redBalloonSphere: {fileID: 183581853}
   blueBalloonSphere: {fileID: 1902655527}
   greenBalloonSphere: {fileID: 2037162554}
@@ -13153,7 +13155,7 @@ MonoBehaviour:
   blueBalloon: {fileID: 1611436097}
   greenBalloon: {fileID: 616885475}
   coloringObject1: {fileID: 909778558}
-  coloringObject2: {fileID: 0}
+  coloringObject2: {fileID: 909778558}
   redBalloonSphere: {fileID: 1333193923}
   blueBalloonSphere: {fileID: 657387457}
   greenBalloonSphere: {fileID: 18317349}
@@ -13596,7 +13598,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -18215,7 +18217,7 @@ MonoBehaviour:
   blueBalloon: {fileID: 1797699111}
   greenBalloon: {fileID: 1633182868}
   coloringObject1: {fileID: 1742958918}
-  coloringObject2: {fileID: 0}
+  coloringObject2: {fileID: 1742958918}
   redBalloonSphere: {fileID: 922269883}
   blueBalloonSphere: {fileID: 1733344413}
   greenBalloonSphere: {fileID: 1871441349}
@@ -19942,7 +19944,7 @@ MonoBehaviour:
   blueBalloon: {fileID: 1882535637}
   greenBalloon: {fileID: 226716715}
   coloringObject1: {fileID: 1930545961}
-  coloringObject2: {fileID: 0}
+  coloringObject2: {fileID: 1930545961}
   redBalloonSphere: {fileID: 382558430}
   blueBalloonSphere: {fileID: 1166893930}
   greenBalloonSphere: {fileID: 605943868}
