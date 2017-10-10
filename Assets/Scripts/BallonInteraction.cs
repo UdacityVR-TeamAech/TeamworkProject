@@ -9,6 +9,8 @@ public class BallonInteraction : MonoBehaviour {
     public GameObject redBalloon, blueBalloon, greenBalloon, coloringObject1, coloringObject2;
     public GameObject redBalloonSphere, blueBalloonSphere, greenBalloonSphere;
 	public GameObject redLabel, greenLabel, blueLabel;
+    public int materialNumberObj1 = 0;
+    public int materialNumberObj2 = 0;
 	private int redSize, blueSize, greenSize;
 	private Balloon selectedBalloon;
 	private MicState micState;
@@ -43,8 +45,8 @@ public class BallonInteraction : MonoBehaviour {
         redBalloonSphere.GetComponent<Renderer>().material.color = new Color((float)(redSize / 122f), .1f, .1f);
         greenBalloonSphere.GetComponent<Renderer>().material.color = new Color(.1f, (float)(greenSize / 122f), .1f);
         blueBalloonSphere.GetComponent<Renderer>().material.color = new Color(.1f, .1f, (float)(blueSize / 122f));
-        coloringObject1.GetComponent<Renderer>().material.color = new Color((float)(redSize/255f), (float)(greenSize/255f), (float)(blueSize/255f));
-        coloringObject2.GetComponent<Renderer>().material.color = new Color((float)(redSize / 255f), (float)(greenSize / 255f), (float)(blueSize / 255f));
+        coloringObject1.GetComponent<Renderer>().materials[materialNumberObj1].color = new Color((float)(redSize / 255f), (float)(greenSize / 255f), (float)(blueSize / 255f));
+        coloringObject2.GetComponent<Renderer>().materials[materialNumberObj2].color = new Color((float)(redSize / 255f), (float)(greenSize / 255f), (float)(blueSize / 255f));
 
         //updateLabels();
         micI.InitMircophone ();
@@ -113,8 +115,8 @@ public class BallonInteraction : MonoBehaviour {
                 }
                 break;
 		}
-        coloringObject1.GetComponent<Renderer>().material.color = new Color((float)(redSize/255f), (float)(greenSize/255f), (float)(blueSize/255f));
-        coloringObject2.GetComponent<Renderer>().material.color = new Color((float)(redSize / 255f), (float)(greenSize / 255f), (float)(blueSize / 255f));
+        coloringObject1.GetComponent<Renderer>().materials[materialNumberObj1].color = new Color((float)(redSize / 255f), (float)(greenSize / 255f), (float)(blueSize / 255f));
+        coloringObject2.GetComponent<Renderer>().materials[materialNumberObj2].color = new Color((float)(redSize / 255f), (float)(greenSize / 255f), (float)(blueSize / 255f));
 
     }
 
@@ -152,8 +154,8 @@ public class BallonInteraction : MonoBehaviour {
             }
                 break;
         }
-        coloringObject1.GetComponent<Renderer>().material.color = new Color((float)(redSize/255f), (float)(greenSize/255f), (float)(blueSize/255f));
-        coloringObject2.GetComponent<Renderer>().material.color = new Color((float)(redSize / 255f), (float)(greenSize / 255f), (float)(blueSize / 255f));
+        coloringObject1.GetComponent<Renderer>().materials[materialNumberObj1].color = new Color((float)(redSize/255f), (float)(greenSize/255f), (float)(blueSize/255f));
+        coloringObject2.GetComponent<Renderer>().materials[materialNumberObj2].color = new Color((float)(redSize / 255f), (float)(greenSize / 255f), (float)(blueSize / 255f));
     }
 
     public void changeRedBalloon(){
