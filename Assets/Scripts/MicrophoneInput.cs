@@ -23,7 +23,7 @@ public class MicrophoneInput : MonoBehaviour {
 
 		// get all available microphones
 		foreach (string device in Microphone.devices) {
-			Debug.Log (device);
+			//Debug.Log (device);
 			if (microphone == null) {
 				//set default mic to first mic found.
 				microphone = device;
@@ -35,8 +35,13 @@ public class MicrophoneInput : MonoBehaviour {
 
 		Debug.Log ("mic: " + microphone + "" + "minThess " + minThreshold);
 
+
 		//initialize input with default mic
-		//StartMicrophone();
+		StartMicrophone();
+	}
+
+	public bool micInitialized(){
+		return audioSource != null && microphone != null;
 	}
 
 	public void PauseMicrophone(){
