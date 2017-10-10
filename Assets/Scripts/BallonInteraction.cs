@@ -6,7 +6,7 @@ public class BallonInteraction : MonoBehaviour {
 
 	private string classTag="BallonInteraction";
 
-	public GameObject redBalloon, blueBalloon, greenBalloon, coloringObject;
+    public GameObject redBalloon, blueBalloon, greenBalloon, coloringObject1, coloringObject2;
     public GameObject redBalloonSphere, blueBalloonSphere, greenBalloonSphere;
 	public GameObject redLabel, greenLabel, blueLabel;
 	private int redSize, blueSize, greenSize;
@@ -43,10 +43,11 @@ public class BallonInteraction : MonoBehaviour {
         redBalloonSphere.GetComponent<Renderer>().material.color = new Color((float)(redSize / 122f), .1f, .1f);
         greenBalloonSphere.GetComponent<Renderer>().material.color = new Color(.1f, (float)(greenSize / 122f), .1f);
         blueBalloonSphere.GetComponent<Renderer>().material.color = new Color(.1f, .1f, (float)(blueSize / 122f));
-        coloringObject.GetComponent<Renderer>().material.color = new Color((float)(redSize/255f), (float)(greenSize/255f), (float)(blueSize/255f));
-                
+        coloringObject1.GetComponent<Renderer>().material.color = new Color((float)(redSize/255f), (float)(greenSize/255f), (float)(blueSize/255f));
+        coloringObject2.GetComponent<Renderer>().material.color = new Color((float)(redSize / 255f), (float)(greenSize / 255f), (float)(blueSize / 255f));
+
         //updateLabels();
-		micI.InitMircophone ();
+        micI.InitMircophone ();
 		micState = MicState.INIT;
 		this.startMicIfNeeded();
 	}
@@ -112,11 +113,14 @@ public class BallonInteraction : MonoBehaviour {
                 }
                 break;
 		}
-        coloringObject.GetComponent<Renderer>().material.color = new Color((float)(redSize/255f), (float)(greenSize/255f), (float)(blueSize/255f));
-	}
+        coloringObject1.GetComponent<Renderer>().material.color = new Color((float)(redSize/255f), (float)(greenSize/255f), (float)(blueSize/255f));
+        coloringObject2.GetComponent<Renderer>().material.color = new Color((float)(redSize / 255f), (float)(greenSize / 255f), (float)(blueSize / 255f));
 
-		
-	public void inflateBalloon(Balloon selBallon, int step){
+    }
+
+
+
+    public void inflateBalloon(Balloon selBallon, int step){
 		float balloonSize = 0f;
 		int max = 255 - step;
 
@@ -148,10 +152,11 @@ public class BallonInteraction : MonoBehaviour {
             }
                 break;
         }
-        coloringObject.GetComponent<Renderer>().material.color = new Color((float)(redSize/255f), (float)(greenSize/255f), (float)(blueSize/255f));
-	}
+        coloringObject1.GetComponent<Renderer>().material.color = new Color((float)(redSize/255f), (float)(greenSize/255f), (float)(blueSize/255f));
+        coloringObject2.GetComponent<Renderer>().material.color = new Color((float)(redSize / 255f), (float)(greenSize / 255f), (float)(blueSize / 255f));
+    }
 
-	public void changeRedBalloon(){
+    public void changeRedBalloon(){
 		Debug.Log (classTag + " changeRedBalloon");
 		selectedBalloon = Balloon.RED;
 		startMic = true;
