@@ -40,15 +40,22 @@ public class BallonInteraction : MonoBehaviour {
 		Debug.Log("viz is null "+ (viz == null));
 
 		redSize = blueSize = greenSize = (int) ((redBalloon.transform.localScale.x - 0.5) * 255);
-        redBalloonSphere.GetComponent<Renderer>().material.color = new Color((float)(redSize / 122f), .1f, .1f);
+        
+		redBalloonSphere.GetComponent<Renderer>().material.color   = new Color((float)(redSize / 122f), .1f, .1f);
         greenBalloonSphere.GetComponent<Renderer>().material.color = new Color(.1f, (float)(greenSize / 122f), .1f);
-        blueBalloonSphere.GetComponent<Renderer>().material.color = new Color(.1f, .1f, (float)(blueSize / 122f));
-        coloringObject1.GetComponent<Renderer>().material.color = new Color((float)(redSize/255f), (float)(greenSize/255f), (float)(blueSize/255f));
-        coloringObject2.GetComponent<Renderer>().material.color = new Color((float)(redSize / 255f), (float)(greenSize / 255f), (float)(blueSize / 255f));
+        blueBalloonSphere.GetComponent<Renderer>().material.color  = new Color(.1f, .1f, (float)(blueSize / 122f));
+        coloringObject1.GetComponent<Renderer>().material.color    = new Color((float)(redSize/255f), (float)(greenSize/255f), (float)(blueSize/255f));
+        coloringObject2.GetComponent<Renderer>().material.color    = new Color((float)(redSize / 255f), (float)(greenSize / 255f), (float)(blueSize / 255f));
 
         //updateLabels();
-        micI.InitMircophone ();
-		micState = MicState.INIT;
+		Debug.Log ("mic initiziizesd: " + micI.micInitialized());
+		if (!micI.micInitialized()) {
+			micI.InitMircophone ();
+			micState = MicState.INIT;
+		}
+		Debug.Log ("BI initialized");
+		Debug.Log ("mic initiziizesd: " + micI.micInitialized());
+        
 		this.startMicIfNeeded();
 	}
 
